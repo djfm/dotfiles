@@ -32,7 +32,8 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/bin:$HOME/.local/bin:/usr/local/cuda-11.4/bin:$PATH"
+export LD_LIBRARY_PATH="/usr/local/cuda-11.4/lib64:$LD_LIBRARY_PATH"
 
 export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
