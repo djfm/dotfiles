@@ -32,7 +32,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="$HOME/bin:$HOME/.local/bin:/usr/local/cuda-11.4/bin:/usr/local/go/bin:$PATH"
+export PATH="$HOME/go/bin:$HOME/bin:$HOME/.local/bin:/usr/local/cuda-11.4/bin:/usr/local/go/bin:$PATH"
 export LD_LIBRARY_PATH="/usr/local/cuda-11.4/lib64:$LD_LIBRARY_PATH"
 
 export ANDROID_HOME=$HOME/Android/Sdk
