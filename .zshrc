@@ -30,17 +30,6 @@ ZSH_DISABLE_COMPFIX=true
 
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
-
-export PATH="$HOME/go/bin:$HOME/bin:$HOME/.local/bin:/usr/local/cuda-11.4/bin:/usr/local/go/bin:$PATH"
-export LD_LIBRARY_PATH="/usr/local/cuda-11.4/lib64:$LD_LIBRARY_PATH"
-
-export ANDROID_HOME=$HOME/Android/Sdk
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/tools/bin
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-
 export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
