@@ -1,3 +1,6 @@
+[include]
+	path = dotfiles/themes.gitconfig
+
 [user]
 	email = fm.de.jouvencel@gmail.com
 	name = François-Marie de Jouvencel
@@ -57,7 +60,6 @@
 	qf = "!f() { git ls-files --modified | xargs git add && git commit -m $1 && git push }; f"
 
 [core]
-	pager = delta --plus-color="#223322" --minus-color="#331111"
 	editor = vim
 	# Treat spaces before tabs and all kinds of trailing whitespace as an error
 	# [default] trailing-space: looks for spaces at the end of a line
@@ -72,6 +74,12 @@
 	# Detect whitespace errors when applying a patch
 	whitespace = fix
 
+[pager]
+	diff = delta
+	log = delta
+	reflog = delta
+	show = delta
+
 [diff]
 	mnemonicPrefix = true
 	renames = true
@@ -79,7 +87,7 @@
 	submodule = log
 
 [interactive]
-	diffFilter = delta --color-only
+	diffFilter = delta --color-only --features=interactive
 
 [fetch]
 	recurseSubmodules = on-demand
@@ -121,3 +129,44 @@
 	required = true
 [init]
 	defaultBranch = main
+
+[delta]
+	# About themes,
+	# see:
+	# https://github.com/dandavison/delta/blob/master/themes.gitconfig
+	
+	# I especially liked these two light themes:
+	# 	features = coracias-caudatus
+	# 	features = hoopoe
+	
+	# But I chose to make my own loosely based on hoopoe.
+
+	features = decorations
+
+[delta "interactive"]
+	keep-plus-minus-markers = false
+
+[delta "decorations"]
+    	light = true
+	syntax-theme = GitHub
+	
+	commit-style = raw
+	commit-decoration-style = blue ol
+    	file-style = omit
+	
+	hunk-header-style = file line-number syntax
+    	hunk-header-file-style = red bold
+	hunk-header-line-number-style = black #"#067a00"
+    	hunk-header-decoration-style = blue box
+	
+	minus-style = normal brightred #"#ffe0e0"
+    	minus-non-emph-style = normal dim white # "#ffe0e0"
+    	minus-emph-style = normal brightred # "#ffc0c0"
+    	minus-empty-line-marker-style = normal "#ffe0e0"
+	
+	plus-style = syntax brightgreen # "#d0ffd0"
+    	plus-non-emph-style = syntax dim white  #"#d0ffd0"
+    	plus-emph-style = syntax bold brightgreen # "#a0efa0"
+    	plus-empty-line-marker-style = normal "#d0ffd0"
+	
+    	zero-style = syntax
