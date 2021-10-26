@@ -47,3 +47,4 @@ if  [ -d "$HOME/Android/Sdk" ] ; then
     PATH="$ANDROID_HOME/platform-tools:$PATH"
 fi
 
+export "DOCKER_HOST=unix:///run/user/$UID/docker.sock"
