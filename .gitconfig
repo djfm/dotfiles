@@ -31,6 +31,7 @@
 	stu = status --untracked-files=no
 	co = checkout
 	ci = commit
+	cinv = commit --no-verify
 	fix = "!git commit --fixup=\"$1\" #"
 	cp = cherry-pick -x
 	nah = reset HEAD --hard
