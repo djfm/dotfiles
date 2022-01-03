@@ -51,4 +51,5 @@ if [ -d "$HOME/.cabal/bin" ] ; then
     PATH="$HOME/.cabal/bin:$PATH"
 fi
 
+export PATH
 export "DOCKER_HOST=unix:///run/user/$UID/docker.sock"

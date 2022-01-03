@@ -28,6 +28,7 @@ plugins=(git)
 
 ZSH_DISABLE_COMPFIX=true
 
+source $HOME/.profile
 source $ZSH/oh-my-zsh.sh
 
 export MANPATH="/usr/local/man:$MANPATH"
