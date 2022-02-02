@@ -53,5 +53,6 @@ fi
 
 export PATH
 export "DOCKER_HOST=unix:///run/user/$UID/docker.sock"
+export IHP_EDITOR="code --goto"
 
 if [ -e /home/djfm/.nix-profile/etc/profile.d/nix.sh ]; then . /home/djfm/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
