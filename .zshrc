@@ -38,7 +38,7 @@ export EDITOR='vim';
 
 alias yt='nocorrect yarn test'
 alias ytdd='nocorrect yarn tdd'
-
+alias cargo='nocorrect cargo'
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
